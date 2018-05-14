@@ -1,6 +1,6 @@
 fs = require('fs');
 
-let parsedContent = require("./parsedtext.json");
+let parsedContent = require("./data/parsedtext.json");
 
 let speakers = new Set(parsedContent.map(content => content.speaker));
 
@@ -26,4 +26,4 @@ debateBody = '<debateBody><debateSection>' + debateSection + '</debateSection></
 
 an = '<akomaNtoso><debate>' + meta + debateBody + '</debate></akomaNtoso>';
 
-fs.writeFileSync('parsedtext.an.xml', an);
+fs.writeFileSync('./data/parsedtext.an.xml', an);

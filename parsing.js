@@ -1,10 +1,10 @@
 fs = require('fs');
 
-let nameList = require('./speakerList.json');
-let paperList = require('./paperList.json');
+let nameList = require('./settings/speakerList.json');
+let paperList = require('./settings/paperList.json');
 let parsedContent = [];
 
-fs.readFile('./text.txt', 'utf8', function (err, data) {
+fs.readFile('./data/transcript.txt', 'utf8', function (err, data) {
 
     var data = data.replace(/\n/g, "").replace(/\r/g, "");
     nameList.map(name => {
